@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe CounterQuery do
+RSpec.describe BodiesCounterQuery do
   let(:star1) do
     Star.create!(
       name: 'Proxima Centauri',

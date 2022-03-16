@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-class CounterQuery
+class BodiesCounterQuery
   def count_stars
     Star.count
   end

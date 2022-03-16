@@ -2,6 +2,6 @@
 
 class DashboardsController < ApplicationController
   def show
-    @bodies_counter = CounterQuery.new
+    @bodies_counter = BodiesCounterQuery.new
   end
 end
