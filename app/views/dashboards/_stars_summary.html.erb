@@ -13,31 +13,31 @@
       <tbody>
         <tr>
           <td><%= t('dashboards.stars_count.categories.o') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("O") %></td>
         </tr>
         <tr>
           <td><%= t('dashboards.stars_count.categories.b') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("B") %></td>
         </tr>
         <tr>
           <td><%= t('dashboards.stars_count.categories.a') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("A") %></td>
         </tr>
         <tr>
           <td><%= t('dashboards.stars_count.categories.f') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("F") %></td>
         </tr>
         <tr>
           <td><%= t('dashboards.stars_count.categories.g') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("G") %></td>
         </tr>
         <tr>
           <td><%= t('dashboards.stars_count.categories.k') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("K") %></td>
         </tr>
         <tr>
           <td><%= t('dashboards.stars_count.categories.m') %></td>
-          <td>-</td>
+          <td><%= @stars_counter_by_category.count("M") %></td>
         </tr>
       </tbody>
     </table>
