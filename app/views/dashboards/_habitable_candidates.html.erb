@@ -12,31 +12,13 @@
         </tr>
       </thead>
       <tbody>
+	<% @closest_candidates.each do |planet| %>
         <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
+          <td><%= planet.name  %></td>
+          <td><%= planet.star.name %></td>
+          <td><%= planet.star.distance_from_earth %></td>
         </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>-</td>
-          <td>-</td>
-          <td>-</td>
-        </tr>
+	<% end %>
       </tbody>
     </table>
   </div>
