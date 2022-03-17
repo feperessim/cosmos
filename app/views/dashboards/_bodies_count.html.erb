@@ -13,18 +13,17 @@
       <tbody>
         <tr>
           <td><%= Star.model_name.human(count: 2) %></td>
-          <td>-</td>
+          <td><%= @bodies_counter.count_stars %></td>
         </tr>
         <tr>
           <td><%= Planet.model_name.human(count: 2) %></td>
-          <td>-</td>
+          <td><%= @bodies_counter.count_planets %></td>
         </tr>
         <tr>
           <td><%= Moon.model_name.human(count: 2) %></td>
-          <td>-</td>
+          <td><%= @bodies_counter.count_moons %></td>
         </tr>
       </tbody>
     </table>
   </div>
 </div>
-
