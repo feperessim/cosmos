@@ -40,16 +40,16 @@ RSpec.describe ClosestCandidatesQuery do
       )
     end
 
-    describe '#n_closest_candidates' do
-      subject(:n_closest_candidates) { described_class.new.n_closest_candidates(n: n) }
+    describe '#closest_candidates' do
+      subject(:closest_candidates) { described_class.new.closest_candidates(n_records: n) }
 
-      context 'When n is 2' do
+      context 'when n is 2' do
         let(:n) { 2 }
 
         it { expect(subject).to match_array([Planet.first, Planet.second]) }
       end
 
-      context 'When n is 0' do
+      context 'when n is 0' do
         let(:n) { 0 }
 
         it { expect(subject).to match_array([]) }
@@ -78,9 +78,9 @@ RSpec.describe ClosestCandidatesQuery do
     end
 
     describe '#n_closest_candidates' do
-      subject(:n_closest_candidates) { described_class.new.n_closest_candidates(n: n) }
+      subject(:closest_candidates) { described_class.new.closest_candidates(n_records: n) }
 
-      context 'When n is 1' do
+      context 'when n is 1' do
         let(:n) { 1 }
 
         it { expect(subject).to match_array([]) }

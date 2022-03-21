@@ -3,7 +3,7 @@
 require 'rails_helper'
 
 RSpec.describe StarsCounterByCategoryQuery do
-  context 'When we have 2 stars of O' do
+  context 'when we have 2 stars of O' do
     before do
       Star.create!(
         name: 'Proxima Centauri',
@@ -23,19 +23,19 @@ RSpec.describe StarsCounterByCategoryQuery do
     describe '#count' do
       subject(:category_count) { described_class.new.count(category) }
 
-      context 'When category is O' do
+      context 'when category is O' do
         let(:category) { 'O' }
 
         it { expect(subject).to eq(2) }
       end
 
-      context 'When category is A' do
+      context 'when category is A' do
         let(:category) { 'A' }
 
         it { expect(subject).to eq(0) }
       end
 
-      context 'When category is invalid' do
+      context 'when category is invalid' do
         let(:category) { nil }
 
         it { expect(subject).to eq(0) }
