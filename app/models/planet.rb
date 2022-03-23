@@ -13,4 +13,9 @@ class Planet < ApplicationRecord
   validates :tidally_locked, inclusion: [true, false], exclusion: [nil]
   validates :category, presence: true
   validates :star, associated: true
+
+  scope :habitable_zone, ->(min_zone_dist, max_zone_dist) { where(distance_from_star: min_zone_dist..max_zone_dist) }
+  scope :gravity_acceptable, ->(min_mass, max_mass) { where mass: min_mass..max_mass }
+  scope :non_synchronized_rotation, -> { where(tidally_locked: false) }
+  scope :order_by_stars_distance_from_earth, -> { order('stars.distance_from_earth') }
 end
